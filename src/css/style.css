@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: vintage, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: vintage;
+  src: url(fonts/CYBERNETIC.otf);
+}
+
+.header {
+  height: 13vh;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgb(142, 142, 143) 0%,
+    rgb(90, 90, 90) 86%
+  );
+  display: grid;
+  grid-template-columns: 1fr repeat(3, auto);
+  align-items: center;
+  border-bottom: 2px solid rgb(76, 112, 124);
+}
+
+.logo {
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+  font-weight: 400;
+  padding: 15px 25px;
+  text-shadow: 4px 4px black;
+  color: lightcoral;
+}
+
+.header button {
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  color: lightblue;
+  background-color: transparent;
+  height: 75px;
+  padding: 0 25px;
+  text-shadow: 1px 1px black;
+}
+
+.header button:hover {
+  color: lightcoral;
+  font-weight: bold;
+}
+
+.main {
+  height: 80vh;
+  width: 100%;
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-items: center;
+  align-items: center;
+  overflow: hidden hidden;
+}
+
+.d1,
+.d2,
+.d3,
+.d4,
+.d5,
+.d6 {
+  background-image: url(images/burger1.png);
+  background-size: 250px auto;
+  height: 250px;
+  width: 250px;
+}
+
+.d1 {
+  animation: drop1 8s linear infinite;
+}
+
+.d2 {
+  animation: drop2 10s linear infinite;
+}
+
+.d3 {
+  animation: drop3 7s linear infinite;
+}
+
+.d4 {
+  animation: drop2 11s linear infinite;
+}
+
+.d5 {
+  animation: drop3 9s linear infinite;
+}
+
+.d6 {
+  animation: drop3 8s linear infinite;
+}
+
+@keyframes drop1 {
+  0% {
+    transform: translate(0, -600px);
+  }
+  100% {
+    transform: translate(0, 600px);
+  }
+}
+
+@keyframes drop2 {
+  0% {
+    transform: translate(0px, -750px);
+  }
+  100% {
+    transform: translate(0px, 600px);
+  }
+}
+
+@keyframes drop3 {
+  0% {
+    transform: translate(0px, -675px);
+  }
+  100% {
+    transform: translate(0px, 600px);
+  }
+}
+
+.welcome {
+  position: absolute;
+  font-size: 6rem;
+  width: 950px;
+  text-shadow: 8px 8px rgb(32, 32, 32);
+  font-weight: 800;
+  color: lightcoral;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  height: 6.8vh;
+  width: 100%;
+  background: linear-gradient(180deg, lightcoral 0%, rgb(180, 89, 89) 80%);
+  border-top: 2px solid rgb(146, 78, 78);
+  z-index: 1;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.menuCard {
+  justify-self: center;
+  grid-column: 1/7;
+}
+
+.menuCard:last-child {
+  padding-bottom: 75px;
+}
+
+.card0 img,
+.card1 img,
+.card2 img,
+.card3 img,
+.card4 img,
+.card5 img {
+  border-radius: 50%;
+  border: 2px solid rgb(65, 87, 94);
+}
+
+.card0,
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+  display: grid;
+  width: 1000px;
+  grid-template-columns: auto auto;
+  padding-top: 75px;
+  gap: 25px;
+}
+
+.burgerDescript0,
+.burgerDescript1,
+.burgerDescript2,
+.burgerDescript3,
+.burgerDescript4,
+.burgerDescript5 {
+  font-size: 1.2rem;
+}
+
+.burgerPrice0,
+.burgerPrice1,
+.burgerPrice2,
+.burgerPrice3,
+.burgerPrice4,
+.burgerPrice5 {
+  font-size: 2rem;
+  color: lightcoral;
+  text-shadow: 2px 2px black;
+}
+
+.burgerInfo {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  padding: 25px;
+}
+
+.burgerName0,
+.burgerName1,
+.burgerName2,
+.burgerName3,
+.burgerName4,
+.burgerName5 {
+  font-size: 3rem;
+  color: rgb(224, 224, 224);
+  text-shadow: 0.2rem 0.2rem black;
+}
+
+.card0 img {
+  content: url(images/classicburger.webp);
+}
+.card1 img {
+  content: url(images/doublecheese.webp);
+}
+.card2 img {
+  content: url(images/spicyburger.webp);
+}
+.card3 img {
+  content: url(images/turkey.webp);
+}
+.card4 img {
+  content: url(images/veggie.webp);
+}
+.card5 img {
+  content: url(images/PORK.webp);
+}
+
+.contactCard {
+  grid-column: 1/7;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 50px;
+  text-align: center;
+}
+
+.orderNum {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(224, 224, 224);
+  text-shadow: 0.2rem 0.2rem black;
+}
+
+.address {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.workingHours {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.googleMaps {
+  width: 400px;
+  height: 250px;
+  border-radius: 25px;
+  border: 2px solid lightcoral;
+  box-shadow: 2px 2px 8px black;
+}
